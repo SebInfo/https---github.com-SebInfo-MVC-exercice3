@@ -13,13 +13,13 @@ ob_start();
         </tr>
         </thead>
         <?php        
-            foreach ($pompiers as $pompier){
+            foreach ($pompiers as $unPompier){
         ?>
             <tr>
-             <td><?= $pompier['NomPompier'] ?></td> 
-             <td><?= $pompier['PrenomPompier'] ?></td> 
-             <td><?= $pompier['TelPompier'] ?></td> 
-             <td><?= $pompier['SexePompier'] ?></td>  
+             <td><?= $unPompier->getNomPompier() ?></td> 
+             <td><?= $unPompier->getPrenomPompier() ?></td>
+             <td><?= $unPompier->getTelPompier()?></td> 
+             <td><?= $unPompier->getSexePompier() ?></td>  
             </tr>
         <?php
         }
@@ -28,4 +28,4 @@ ob_start();
 </table>
 <?php
 $content = ob_get_clean();
-require "gabarit.php";
+require "layouts/gabarit.php";
