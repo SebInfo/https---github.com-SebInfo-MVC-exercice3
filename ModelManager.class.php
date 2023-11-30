@@ -1,9 +1,9 @@
 <?php
-class Model {
+class ModelManager {
     private $bdd;
     function __construct(){
         $dsn = "mysql:host=127.0.0.1;port=8889;dbname=DSC";
-        $user = "roots";
+        $user = "root";
         $pass = "root"; 
         try {
             $this->bdd = new PDO ($dsn,$user,$pass);

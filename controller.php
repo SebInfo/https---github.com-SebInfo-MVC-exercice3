@@ -1,13 +1,15 @@
 <?php
-require_once("Pompier.php");
+require_once("PompierManager.class.php");
 
 function listePompier()
 {
-    $pompier = new Pompier();
-    if ($pompiers = $pompier->getAllPompiers()){
+    $lesPompiers = new PompierManager();
+    if ($pompiers = $lesPompiers->getAllPompiers())
+    {
         require_once("view.php");
     }
-    else{
+    else
+    {
         require_once("erreur.php");
     }
 }
